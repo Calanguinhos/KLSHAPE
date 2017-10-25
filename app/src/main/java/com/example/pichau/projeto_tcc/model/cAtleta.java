@@ -13,6 +13,25 @@ public class cAtleta extends cPessoa {
         this.cod = cod;
     }
 
+    public void fEnviaNotificacao(){
+
+    }
+
+    @Override
+    public void qExecDrop(int _id, String _nome, int _rg, int _cpf, String _email, String _senha, String _endereco) {
+        super.qExecDrop(_id, _nome, _rg, _cpf, _email, _senha, _endereco);
+    }
+
+    @Override
+    public void qExecPesquisa(int _id, String _nome, int _rg, int _cpf, String _email, String _senha, String _endereco) {
+        super.qExecPesquisa(_id, _nome, _rg, _cpf, _email, _senha, _endereco);
+    }
+
+    @Override
+    public void qExecCriaUp(int _id, String _nome, int _rg, int _cpf, String _email, String _senha, String _endereco) {
+        super.qExecCriaUp(_id, _nome, _rg, _cpf, _email, _senha, _endereco);
+    }
+
     public int getCod() {
         return cod;
     }

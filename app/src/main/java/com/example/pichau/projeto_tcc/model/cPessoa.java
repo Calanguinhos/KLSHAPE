@@ -13,6 +13,7 @@ public class cPessoa {
     private String senha;
     private String endereco;
 
+    //Metodo construtor
     public cPessoa(String nome, int rg, int cpf, String email, String senha, String endereco) {
         this.nome = nome;
         this.rg = rg;
@@ -22,6 +23,22 @@ public class cPessoa {
         this.endereco = endereco;
     }
 
+    //Modelo Query de add e update
+    public void qExecCriaUp(int _id, String _nome, int _rg, int _cpf, String _email, String _senha, String _endereco){
+
+    }
+
+    //Modelo Query de busca
+    public void qExecPesquisa(int _id, String _nome, int _rg, int _cpf, String _email, String _senha, String _endereco){
+
+    }
+
+    //Modelo Query de exclusão
+    public void qExecDrop(int _id, String _nome, int _rg, int _cpf, String _email, String _senha, String _endereco){
+
+    }
+
+    //Metodos de encapsulamento
     public String getNome() {
         return nome;
     }

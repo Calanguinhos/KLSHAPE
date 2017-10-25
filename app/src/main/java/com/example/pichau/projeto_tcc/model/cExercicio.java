@@ -16,6 +16,10 @@ public class cExercicio {
         this.nome = nome;
     }
 
+    public void fGeraListaExercicio(){
+
+    }
+
     public int getId() {
         return id;
     }
