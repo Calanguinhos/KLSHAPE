@@ -16,9 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Cadastro1" />
-        <activity android:name=".CadastroAtleta" />
-        <activity android:name=".CadastroInstrutor" />
+        <activity android:name=".dao.Cadastro1" />
+        <activity android:name=".dao.CadastroAtleta" />
+        <activity android:name=".dao.CadastroInstrutor" />
         <activity android:name=".Login"></activity>
     </application>
 

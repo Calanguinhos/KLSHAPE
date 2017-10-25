@@ -1,4 +1,4 @@
-package com.example.pichau.projeto_tcc;
+package com.example.pichau.projeto_tcc.dao;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

@@ -1,10 +1,12 @@
-package com.example.pichau.projeto_tcc;
+package com.example.pichau.projeto_tcc.dao;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+
+import com.example.pichau.projeto_tcc.R;
 
 public class Cadastro1 extends AppCompatActivity {
 
@@ -20,7 +22,7 @@ public class Cadastro1 extends AppCompatActivity {
         imgbtn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent b = new Intent(Cadastro1.this, com.example.pichau.projeto_tcc.CadastroInstrutor.class);
+                Intent b = new Intent(Cadastro1.this, CadastroInstrutor.class);
                 startActivity(b);
             }
         });

@@ -1,4 +1,4 @@
-package com.example.pichau.projeto_tcc;
+package com.example.pichau.projeto_tcc.dao;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -6,6 +6,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
+
+import com.example.pichau.projeto_tcc.R;
+import com.example.pichau.projeto_tcc.dao.CRUD;
 
 public class CadastroAtleta extends AppCompatActivity {
 
