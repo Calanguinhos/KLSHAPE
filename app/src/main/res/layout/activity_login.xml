@@ -27,7 +27,7 @@ tools:context="com.example.pichau.projeto_tcc.Login">
     android:src="@mipmap/logokl" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/edtEmail"
         android:layout_width="wrap_content"
         android:layout_height="45dp"
         android:layout_below="@+id/imageView"
@@ -55,19 +55,19 @@ tools:context="com.example.pichau.projeto_tcc.Login">
     android:text="Senha:"
     android:textColor="@android:color/background_dark"
     android:textColorLink="@android:color/background_light"
-    android:layout_below="@+id/editText3"
-    android:layout_alignLeft="@+id/editText3"
-    android:layout_alignStart="@+id/editText3" />
+    android:layout_below="@+id/edtEmail"
+    android:layout_alignLeft="@+id/edtEmail"
+    android:layout_alignStart="@+id/edtEmail" />
 
-<ImageButton
-    android:id="@+id/imageButton3"
-    android:layout_width="213dp"
-    android:layout_height="50dp"
-    android:layout_marginTop="26dp"
-    android:background="@android:color/transparent"
-    android:src="@mipmap/botao_entrar"
-    android:layout_below="@+id/editText5"
-    android:layout_alignRight="@+id/editText5"
-    android:layout_alignEnd="@+id/editText5" />
+    <ImageButton
+        android:id="@+id/btnLogin"
+        android:layout_width="213dp"
+        android:layout_height="50dp"
+        android:layout_alignEnd="@+id/editText5"
+        android:layout_alignRight="@+id/editText5"
+        android:layout_below="@+id/editText5"
+        android:layout_marginTop="26dp"
+        android:background="@android:color/transparent"
+        android:src="@mipmap/botao_entrar" />
 
 </RelativeLayout>
