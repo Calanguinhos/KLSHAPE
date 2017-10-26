@@ -1,4 +1,4 @@
-package com.example.pichau.projeto_tcc.dao;
+package com.example.pichau.projeto_tcc.dao.old;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,7 +8,6 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.pichau.projeto_tcc.R;
-import com.example.pichau.projeto_tcc.dao.CRUD;
 
 public class CadastroInstrutor extends AppCompatActivity {
 

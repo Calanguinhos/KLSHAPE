@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-import com.example.pichau.projeto_tcc.dao.Cadastro1;
+import com.example.pichau.projeto_tcc.dao.old.Cadastro1;
 
 public class MainActivity extends AppCompatActivity {
 

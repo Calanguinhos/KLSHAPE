@@ -17,5 +17,5 @@ tools:context="com.example.pichau.projeto_tcc.Login">
         android:layout_alignParentTop="true"
         android:layout_marginLeft="81dp"
         android:layout_marginStart="81dp"
-        app:srcCompat="@mipmap/info_ficha" />
+        android:src="@mipmap/info_ficha" />
 </RelativeLayout>

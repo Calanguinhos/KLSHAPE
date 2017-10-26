@@ -1,15 +1,15 @@
-package com.example.pichau.projeto_tcc.dao;
+package com.example.pichau.projeto_tcc.dao.old;
 
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.example.pichau.projeto_tcc.dao.Banco;
+import com.example.pichau.projeto_tcc.dao.old.Banco;
 
 public class CRUD {
     SQLiteDatabase db;
-    com.example.pichau.projeto_tcc.dao.Banco Banco;
+    com.example.pichau.projeto_tcc.dao.old.Banco Banco;
 
     public CRUD(Context context){
         Banco = new Banco(context);
