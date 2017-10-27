@@ -1,12 +1,13 @@
-package com.example.pichau.projeto_tcc.dao.old;
+package com.calangos.mainApp.dao.old;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
 
-import com.example.pichau.projeto_tcc.R;
+import com.calangos.mainApp.R;
+
 
 public class Cadastro1 extends AppCompatActivity {
 

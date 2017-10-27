@@ -1,4 +1,4 @@
-package com.example.pichau.projeto_tcc.model;
+package com.calangos.mainApp.models;
 
 /**
  * Created by rafael on 25/10/17.

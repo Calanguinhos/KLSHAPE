@@ -1,4 +1,4 @@
-package com.example.pichau.projeto_tcc;
+package com.calangos.mainApp;
 
 import org.junit.Test;
 

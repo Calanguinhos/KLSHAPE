@@ -1,4 +1,4 @@
-package com.example.pichau.projeto_tcc;
+package com.calangos.mainApp;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.pichau.projeto_tcc", appContext.getPackageName());
+        assertEquals("com.example.pichau.mainApp", appContext.getPackageName());
     }
 }

@@ -1,15 +1,16 @@
-package com.example.pichau.projeto_tcc.dao.old;
+package com.calangos.mainApp.dao.old;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-import com.example.pichau.projeto_tcc.R;
+import com.calangos.mainApp.R;
 
-public class CadastroAtleta extends AppCompatActivity {
+
+public class CadastroInstrutor extends AppCompatActivity {
 
     EditText nm,rg,cpf,end,email,senha;
 
@@ -19,7 +20,7 @@ public class CadastroAtleta extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cadastro_atleta);
+        setContentView(R.layout.activity_cadastro_instrutor);
         nm = (EditText) findViewById(R.id.nm);
         rg = (EditText) findViewById(R.id.rg);
         cpf = (EditText) findViewById(R.id.cpf);
@@ -45,6 +46,8 @@ public class CadastroAtleta extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), resultado, Toast.LENGTH_LONG).show();
             }
         });
+
+
 
 
 
