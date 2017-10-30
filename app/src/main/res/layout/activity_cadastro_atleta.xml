@@ -189,7 +189,8 @@
         android:src="@mipmap/botao_limpar"
         android:background="@android:color/transparent"
         android:layout_alignTop="@+id/btCad"
-        android:layout_toEndOf="@+id/btCad" />
+        android:layout_toEndOf="@+id/btCad"
+        android:layout_toRightOf="@+id/btCad" />
 
     <ImageView
         android:id="@+id/imageView6"
