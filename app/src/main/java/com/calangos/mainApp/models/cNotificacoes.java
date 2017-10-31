@@ -10,7 +10,7 @@ public class cNotificacoes {
     private String nome;
     private String Descricao;
     private String tipo;
-    private cAtleta aluno = new cAtleta(null,0,0,null,null,null,0);
+    private cAtleta aluno = new cAtleta(null,0,0,null,null,null);
     private cInstrutor instrutor = new cInstrutor(null,0,0,null,null,null,0);
 
     public cNotificacoes(int id, String nome, String descricao, String tipo, cAtleta aluno, cInstrutor instrutor) {

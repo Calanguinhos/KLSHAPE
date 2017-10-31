@@ -8,7 +8,7 @@ import java.util.List;
 
 public class cTreinamento {
 
-    private cAtleta atleta = new cAtleta(null,0,0,null,null,null,0);
+    private cAtleta atleta = new cAtleta(null,0,0,null,null,null);
     private cInstrutor intrutor = new cInstrutor(null,0,0,null,null,null,0);
     private List<cExercicio> exercicio;
     private cNotificacoes notificacoes = new cNotificacoes(0,null,null,null,null,null);

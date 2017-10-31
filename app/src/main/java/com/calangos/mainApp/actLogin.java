@@ -8,7 +8,7 @@ import android.widget.ImageButton;
 
 import com.calangos.mainApp.dao.webServiceClient;
 
-public class Login extends AppCompatActivity {
+public class actLogin extends AppCompatActivity {
 
     protected EditText edtEmail;
 
@@ -25,7 +25,7 @@ public class Login extends AppCompatActivity {
             public void onClick(View view) {
 
                 webServiceClient web = new webServiceClient();
-                edtEmail.setText("foda-se");
+                edtEmail.setText("");
             }
         });
 

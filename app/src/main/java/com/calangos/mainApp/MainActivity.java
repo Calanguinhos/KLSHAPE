@@ -6,8 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
 
-import com.calangos.mainApp.dao.old.Cadastro1;
-
 public class MainActivity extends AppCompatActivity {
 
     ImageButton btn1, btn2;
@@ -22,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent a = new Intent(MainActivity.this, Login.class);
+                Intent a = new Intent(MainActivity.this, actLogin.class);
                 startActivity(a);
 
 
@@ -31,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, Cadastro1.class);
+                Intent i = new Intent(MainActivity.this, actCadastro.class);
                 startActivity(i);
 
             }
