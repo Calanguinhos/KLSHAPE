@@ -8,6 +8,7 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.calangos.mainApp.R;
+import com.calangos.mainApp.dao.temp.dbControll;
 
 
 public class actCadastroInstrutor extends AppCompatActivity {
@@ -33,7 +34,7 @@ public class actCadastroInstrutor extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                //CRUD crud = new CRUD(getBaseContext());
+                //dbControll bd = new dbControll(getBaseContext());
 
                 String nome = nm.getText().toString();
                 String RG= rg.getText().toString();
@@ -42,7 +43,7 @@ public class actCadastroInstrutor extends AppCompatActivity {
                 String Email= email.getText().toString();
                 String Senha= senha.getText().toString();
 
-                //String resultado=crud.inserir(nome,RG,CPF,Endereco,Email,Senha);
+                //String resultado=bd.addAtleta(nome,RG,CPF,Endereco,Email,Senha);
                 //Toast.makeText(getApplicationContext(), resultado, Toast.LENGTH_LONG).show();
             }
         });

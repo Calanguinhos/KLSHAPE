@@ -34,15 +34,16 @@ public class actCadastroAtleta extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                dbControll db = new dbControll(getBaseContext());
-                atleta = new cAtleta(getNm().getText().toString(),
-                        Integer.parseInt(getRg().getText().toString()),
-                        Integer.parseInt(getCpf().getText().toString()),
-                        getEmail().getText().toString(),
-                        getSenha().getText().toString(),
-                        getEnd().getText().toString());
+                atleta.setNome(getNm().getText().toString());
+                atleta.setCpf(Integer.parseInt(getCpf().getText().toString()));
+                atleta.setEmail(getEmail().getText().toString());
+                atleta.setEndereco(getEnd().getText().toString());
+                atleta.setSenha(getSenha().getText().toString());
+                atleta.setRg(Integer.parseInt(getRg().getText().toString()));
+                atleta.addAtleta(getApplicationContext(), getBaseContext());
             }
         });
+
     }
 
     public EditText getNm() {

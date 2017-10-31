@@ -13,13 +13,12 @@ public class DataBase extends SQLiteOpenHelper{
     static final String TABELA  = "";
     static final int VERSAO = 1;
     
-    static final String NOME = "";
-    static final String END = "";
-    static final int ID = 0;
-    static final int CPF = 0;
-    static final int RG = 0;
-    static final String EMAIL = "";
-    static final String SENHA = "";
+    static final String ALU_NOME = "Alu_nome";
+    static final String ALU_END = "Alu_endereco";
+    static final String ALU_CPF = "Alu_cpf";
+    static final String ALU_RG = "Alu_rg";
+    static final String ALU_EMAIL = "Alu_email";
+    static final String ALU_SENHA = "Alu_senha";
     
     public DataBase(Context context) {
         
@@ -28,7 +27,7 @@ public class DataBase extends SQLiteOpenHelper{
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(ScriptSQL.getCreateDATABASE());
+        //db.execSQL(ScriptSQL.getCreateDATABASE());
         db.execSQL(ScriptSQL.getCreateALUNOS());
         db.execSQL(ScriptSQL.getCreateEXERCICIOS());
         db.execSQL(ScriptSQL.getCreateINSTRUTORES());

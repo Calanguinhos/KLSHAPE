@@ -1,5 +1,8 @@
 package com.calangos.mainApp.models;
 
+import android.content.Context;
+import android.widget.Toast;
+
 import com.calangos.mainApp.dao.temp.dbControll;
 
 /**
@@ -9,15 +12,17 @@ import com.calangos.mainApp.dao.temp.dbControll;
 public class cAtleta extends cPessoa {
 
     int cod;
-    dbControll query = new dbControll();
 
     public cAtleta(String nome, int rg, int cpf, String email, String senha, String endereco) {
         super(nome, rg, cpf, email, senha, endereco);
 
     }
 
-    public void addAtleta(){
-        query.addAtleta(this.getNome(), this.getRg(),this.getCpf(),this.getEndereco(),this.getEmail(),this.getSenha());
+    public void addAtleta(Context contApp, Context contDb){
+        dbControll query = new dbControll(contDb);
+        String result;
+        result = query.addAtleta(getNome(), getRg(),getCpf(),getEndereco(),getEmail(),getSenha());
+        Toast.makeText(contApp, result, Toast.LENGTH_LONG).show();
     }
 
     public int getCod() {

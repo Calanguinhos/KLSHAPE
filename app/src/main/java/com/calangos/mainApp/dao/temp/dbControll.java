@@ -13,10 +13,6 @@ public class dbControll {
     private SQLiteDatabase db;
     private DataBase banco;
 
-    public dbControll() {
-
-    }
-
     public dbControll(Context context){
         banco = new DataBase(context);
     }
@@ -27,17 +23,18 @@ public class dbControll {
 
         db = banco.getWritableDatabase();
         valores = new ContentValues();
-        valores.put(DataBase.NOME, nome);
-        valores.put(DataBase.EMAIL, email);
-        valores.put(DataBase.END, end);
-        valores.put(DataBase.SENHA, senha);
-        valores.put(String.valueOf(DataBase.CPF), cpf);
-        valores.put(String.valueOf(DataBase.RG), rg);
+        //valores.put(DataBase.ID, );
+        valores.put(DataBase.ALU_NOME, nome);
+        valores.put(DataBase.ALU_EMAIL, email);
+        valores.put(DataBase.ALU_END, end);
+        valores.put(DataBase.ALU_SENHA, senha);
+        valores.put(String.valueOf(DataBase.ALU_CPF), cpf);
+        valores.put(String.valueOf(DataBase.ALU_RG), rg);
 
-        resultado = db.insert("ATLETAS", null, valores);
+        resultado = db.insert("ALUNOS", null, valores);
         db.close();
 
-        if (resultado == 1){
+        if (resultado ==-1){
             return "Erro ao inserir";
         } else {
             return "Registro inserido";
