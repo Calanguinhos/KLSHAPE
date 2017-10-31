@@ -29,7 +29,7 @@ public class actMenuAtleta extends Activity {
             @Override
             public void onClick(View view) {
 
-                Toast.makeText(getApplicationContext(), "NOTIFICAÇÃO ENVIADA", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "NOTIFICAÇÃO ENVIADA", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -38,7 +38,7 @@ public class actMenuAtleta extends Activity {
             @Override
             public void onClick(View view) {
 
-                Toast.makeText(getApplicationContext(), "SEM FICHA CADASTRADA", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "SEM FICHA CADASTRADA", Toast.LENGTH_SHORT).show();
             }
         });
 
