@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name="com.calangos.mainApp.actCadastro" />
+        <activity android:name="com.calangos.mainApp.actMenuAtleta" />
         <activity android:name="com.calangos.mainApp.actCadastroAtleta" />
         <activity android:name="com.calangos.mainApp.actCadastroInstrutor" />
         <activity android:name="com.calangos.mainApp.actLogin"></activity>

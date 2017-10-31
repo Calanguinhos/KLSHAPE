@@ -1,5 +1,6 @@
 package com.calangos.mainApp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -22,7 +23,7 @@ public class actCadastroAtleta extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro_atleta);
 
-        nm = (EditText) findViewById(R.id.nm);
+        nm = findViewById(R.id.nm);
         rg = (EditText) findViewById(R.id.rg);
         cpf = (EditText) findViewById(R.id.cpf);
         end = (EditText) findViewById(R.id.end);
@@ -34,13 +35,16 @@ public class actCadastroAtleta extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                atleta.setNome(getNm().getText().toString());
-                atleta.setCpf(Integer.parseInt(getCpf().getText().toString()));
-                atleta.setEmail(getEmail().getText().toString());
-                atleta.setEndereco(getEnd().getText().toString());
-                atleta.setSenha(getSenha().getText().toString());
-                atleta.setRg(Integer.parseInt(getRg().getText().toString()));
+                /* atleta.setNome(nm.getText().toString());
+                atleta.setCpf(Integer.parseInt(cpf.getText().toString()));
+                atleta.setEmail(email.getText().toString());
+                atleta.setEndereco(end.getText().toString());
+                atleta.setSenha(senha.getText().toString());
+                atleta.setRg(Integer.parseInt(rg.getText().toString()));
                 atleta.addAtleta(getApplicationContext(), getBaseContext());
+                */
+                Intent i = new Intent(actCadastroAtleta.this, actLogin.class);
+                startActivity(i);
             }
         });
 

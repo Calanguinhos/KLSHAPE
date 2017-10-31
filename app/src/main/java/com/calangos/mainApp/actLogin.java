@@ -1,5 +1,6 @@
 package com.calangos.mainApp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -24,8 +25,8 @@ public class actLogin extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                webServiceClient web = new webServiceClient();
-                edtEmail.setText("");
+                Intent i = new Intent(actLogin.this, actMenuAtleta.class);
+                startActivity(i);
             }
         });
 

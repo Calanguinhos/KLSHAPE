@@ -60,13 +60,13 @@ tools:context=".actLogin">
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text='"nome do atleta"'
-        android:textColor="@android:color/background_light"
         android:layout_alignBottom="@+id/imageView11"
-        android:layout_alignRight="@+id/imageView17"
         android:layout_alignEnd="@+id/imageView17"
+        android:layout_alignRight="@+id/imageView17"
+        android:layout_marginEnd="23dp"
         android:layout_marginRight="23dp"
-        android:layout_marginEnd="23dp" />
+        android:text="João da SIlva"
+        android:textColor="@android:color/background_light" />
 
     <ImageView
         android:id="@+id/imageView12"
