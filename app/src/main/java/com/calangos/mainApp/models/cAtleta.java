@@ -11,25 +11,7 @@ import com.calangos.mainApp.dao.temp.dbControll;
 
 public class cAtleta extends cPessoa {
 
-    int cod;
-
-    public cAtleta(String nome, int rg, int cpf, String email, String senha, String endereco) {
-        super(nome, rg, cpf, email, senha, endereco);
-
-    }
-
-    public void addAtleta(Context contApp, Context contDb){
-        dbControll query = new dbControll(contDb);
-        String result;
-        result = query.addAtleta(getNome(), getRg(),getCpf(),getEndereco(),getEmail(),getSenha());
-        Toast.makeText(contApp, result, Toast.LENGTH_LONG).show();
-    }
-
-    public int getCod() {
-        return cod;
-    }
-
-    public void setCod(int cod) {
-        this.cod = cod;
+    public cAtleta(int id, String nome, int rg, int cpf, String email, String senha, String endereco) {
+        super(id, nome, rg, cpf, email, senha, endereco);
     }
 }

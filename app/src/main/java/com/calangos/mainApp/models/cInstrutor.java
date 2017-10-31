@@ -6,18 +6,7 @@ package com.calangos.mainApp.models;
 
 public class cInstrutor extends cPessoa {
 
-    int cod;
-
-    public cInstrutor(String nome, int rg, int cpf, String email, String senha, String endereco, int cod) {
-        super(nome, rg, cpf, email, senha, endereco);
-        this.cod = cod;
-    }
-
-    public int getCod() {
-        return cod;
-    }
-
-    public void setCod(int cod) {
-        this.cod = cod;
+    public cInstrutor(int id, String nome, int rg, int cpf, String email, String senha, String endereco) {
+        super(id, nome, rg, cpf, email, senha, endereco);
     }
 }

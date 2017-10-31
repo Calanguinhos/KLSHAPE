@@ -8,15 +8,15 @@ public class cNotificacoes {
 
     private int id;
     private String nome;
-    private String Descricao;
+    private String descricao;
     private String tipo;
-    private cAtleta aluno = new cAtleta(null,0,0,null,null,null);
-    private cInstrutor instrutor = new cInstrutor(null,0,0,null,null,null,0);
+    private cAtleta aluno;
+    private cInstrutor instrutor;
 
     public cNotificacoes(int id, String nome, String descricao, String tipo, cAtleta aluno, cInstrutor instrutor) {
         this.id = id;
         this.nome = nome;
-        Descricao = descricao;
+        this.descricao = descricao;
         this.tipo = tipo;
         this.aluno = aluno;
         this.instrutor = instrutor;
@@ -39,11 +39,11 @@ public class cNotificacoes {
     }
 
     public String getDescricao() {
-        return Descricao;
+        return descricao;
     }
 
     public void setDescricao(String descricao) {
-        Descricao = descricao;
+        this.descricao = descricao;
     }
 
     public String getTipo() {

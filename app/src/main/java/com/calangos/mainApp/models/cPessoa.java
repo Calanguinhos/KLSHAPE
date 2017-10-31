@@ -4,8 +4,9 @@ package com.calangos.mainApp.models;
  * Created by rafael on 25/10/17.
  */
 
-public class cPessoa {
+public abstract class cPessoa {
 
+    private  int id;
     private String nome;
     private int rg;
     private int cpf;
@@ -14,7 +15,8 @@ public class cPessoa {
     private String endereco;
 
     //Metodo construtor
-    public cPessoa(String nome, int rg, int cpf, String email, String senha, String endereco) {
+    public cPessoa(int id, String nome, int rg, int cpf, String email, String senha, String endereco) {
+        this.id = id;
         this.nome = nome;
         this.rg = rg;
         this.cpf = cpf;
@@ -23,22 +25,16 @@ public class cPessoa {
         this.endereco = endereco;
     }
 
-    //Modelo Query de add e update
-    public void qExecCriaUp(int _id, String _nome, int _rg, int _cpf, String _email, String _senha, String _endereco){
-
-    }
-
-    //Modelo Query de busca
-    public void qExecPesquisa(int _id, String _nome, int _rg, int _cpf, String _email, String _senha, String _endereco){
-
-    }
-
-    //Modelo Query de exclusão
-    public void qExecDrop(int _id, String _nome, int _rg, int _cpf, String _email, String _senha, String _endereco){
-
-    }
 
     //Metodos de encapsulamento
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public String getNome() {
         return nome;
     }

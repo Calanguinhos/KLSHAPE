@@ -4,7 +4,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/icon_prof"
         android:label="KLSHAPE"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -17,6 +17,9 @@
             </intent-filter>
         </activity>
         <activity android:name="com.calangos.mainApp.actCadastro" />
+        <activity android:name="com.calangos.mainApp.actMenuTreinador" />
+        <activity android:name="com.calangos.mainApp.actInstNotificacao" />
+        <activity android:name="com.calangos.mainApp.actInsFicha" />
         <activity android:name="com.calangos.mainApp.actMenuAtleta" />
         <activity android:name="com.calangos.mainApp.actCadastroAtleta" />
         <activity android:name="com.calangos.mainApp.actCadastroInstrutor" />
