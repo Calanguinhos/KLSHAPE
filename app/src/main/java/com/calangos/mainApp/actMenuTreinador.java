@@ -7,4 +7,10 @@ import android.app.Activity;
  */
 
 public class actMenuTreinador extends Activity {
+
+    @Override
+    public void onBackPressed(){
+        super.onBackPressed();
+        this.finish();
+    }
 }

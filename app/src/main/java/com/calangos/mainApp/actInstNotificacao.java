@@ -7,4 +7,11 @@ import android.app.Activity;
  */
 
 public class actInstNotificacao extends Activity {
+
+
+    @Override
+    public void onBackPressed(){
+        super.onBackPressed();
+        this.finish();
+    }
 }

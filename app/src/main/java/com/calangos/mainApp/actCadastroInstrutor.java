@@ -1,5 +1,6 @@
 package com.calangos.mainApp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -7,53 +8,84 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-import com.calangos.mainApp.R;
-import com.calangos.mainApp.dao.temp.dbControll;
+import com.calangos.mainApp.dao.manData;
+import com.calangos.mainApp.models.cInstrutor;
 
 
-public class actCadastroInstrutor extends AppCompatActivity {
+public class actCadastroInstrutor extends AppCompatActivity implements manData {
 
-    EditText nm,rg,cpf,end,email,senha;
-
-
-    ImageButton btCad;
+    private EditText nm,rg,cpf,end,email,senha;
+    private ImageButton btCad;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro_instrutor);
-        nm = (EditText) findViewById(R.id.nm);
-        rg = (EditText) findViewById(R.id.rg);
-        cpf = (EditText) findViewById(R.id.cpf);
-        end = (EditText) findViewById(R.id.end);
-        email = (EditText) findViewById(R.id.email);
-        senha = (EditText) findViewById(R.id.senha);
-        btCad = (ImageButton) findViewById(R.id.btCad);
+        nm =  findViewById(R.id.nm);
+        rg =  findViewById(R.id.rg);
+        cpf =  findViewById(R.id.cpf);
+        end =  findViewById(R.id.end);
+        email =  findViewById(R.id.email);
+        senha =  findViewById(R.id.senha);
+        btCad = findViewById(R.id.btCadc);
 
         btCad.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View v) {
-                //dbControll bd = new dbControll(getBaseContext());
 
-                String nome = nm.getText().toString();
-                String RG= rg.getText().toString();
-                String CPF= cpf.getText().toString();
-                String Endereco= end.getText().toString();
-                String Email= email.getText().toString();
-                String Senha= senha.getText().toString();
+                String result = addRegs();
+                Toast.makeText(getApplicationContext(), "Obrigado "+result+" por se cadastrar", Toast.LENGTH_SHORT).show();
 
-                //String resultado=bd.addAtleta(nome,RG,CPF,Endereco,Email,Senha);
-                //Toast.makeText(getApplicationContext(), resultado, Toast.LENGTH_LONG).show();
+                Intent i = new Intent(actCadastroInstrutor.this, actCadastro.class);
+                startActivity(i);
+                finish();
+
             }
         });
+    }
 
+    @Override
+    public String opeTrans() {
+        return null;
+    }
 
+    @Override
+    public String addRegs() {
 
+        String result;
 
+        String _nome = nm.getText().toString();
+        int _rg = Integer.parseInt(rg.getText().toString());
+        int _cpf = Integer.parseInt(cpf.getText().toString());
+        String _endereco = end.getText().toString();
+        String _email = email.getText().toString();
+        String _senha = senha.getText().toString();
 
+        cInstrutor atleta = new cInstrutor(0,_nome,_rg,_cpf,_email,_senha,_endereco);
+        result = atleta.addInstrutor(_nome,_rg,_cpf,_email,_senha,_endereco, getApplicationContext());
 
+        return result;
+    }
 
+    @Override
+    public String canRegs() {
+        return null;
+    }
 
+    @Override
+    public String delRegs() {
+        return null;
+    }
+
+    @Override
+    public String selRegs() {
+        return null;
+    }
+
+    @Override
+    public void onBackPressed(){
+        super.onBackPressed();
+        this.finish();
     }
 }

@@ -9,11 +9,7 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.calangos.mainApp.dao.manData;
-import com.calangos.mainApp.dao.temp.dbControll;
 import com.calangos.mainApp.models.cAtleta;
-
-import java.util.ArrayList;
-import java.util.List;
 
 
 public class actCadastroAtleta extends AppCompatActivity implements manData {
@@ -32,7 +28,7 @@ public class actCadastroAtleta extends AppCompatActivity implements manData {
         end = findViewById(R.id.end);
         email = findViewById(R.id.email);
         senha = findViewById(R.id.senha);
-        btCad = findViewById(R.id.btCad);
+        btCad = findViewById(R.id.btCadc);
 
         btCad.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -41,8 +37,9 @@ public class actCadastroAtleta extends AppCompatActivity implements manData {
                 String result = addRegs();
                 Toast.makeText(getApplicationContext(), "Obrigado "+result+" por se cadastrar", Toast.LENGTH_SHORT).show();
 
-                Intent i = new Intent(actCadastroAtleta.this, actLogin.class);
+                Intent i = new Intent(actCadastroAtleta.this, actCadastro.class);
                 startActivity(i);
+                finish();
 
             }
         });
@@ -90,6 +87,12 @@ public class actCadastroAtleta extends AppCompatActivity implements manData {
     @Override
     public void onPointerCaptureChanged(boolean hasCapture) {
 
+    }
+
+    @Override
+    public void onBackPressed(){
+        super.onBackPressed();
+        this.finish();
     }
 
 

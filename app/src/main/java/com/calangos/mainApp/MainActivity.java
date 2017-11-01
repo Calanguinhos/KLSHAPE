@@ -6,9 +6,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
 
+import com.calangos.mainApp.models.cAtleta;
+import com.calangos.mainApp.models.cInstrutor;
+
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
-    ImageButton btn1, btn2;
+    private ImageButton btn1, btn2;
+    public List<cAtleta> atletas;
+    public List<cInstrutor> instrutores;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

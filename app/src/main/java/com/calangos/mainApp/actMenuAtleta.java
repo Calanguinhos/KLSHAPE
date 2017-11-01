@@ -44,4 +44,10 @@ public class actMenuAtleta extends Activity {
 
     }
 
+    @Override
+    public void onBackPressed(){
+        super.onBackPressed();
+        this.finish();
+    }
+
 }
