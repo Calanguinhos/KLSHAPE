@@ -1,10 +1,12 @@
 package com.calangos.mainApp.models;
 
+import com.calangos.mainApp.dao.manData;
+
 /**
  * Created by rafael on 25/10/17.
  */
 
-public class cExercicio {
+public class cExercicio implements manData {
 
     private int id;
     private String tipo;
@@ -18,6 +20,31 @@ public class cExercicio {
 
     public void fGeraListaExercicio(){
 
+    }
+
+    @Override
+    public String opeTrans() {
+        return null;
+    }
+
+    @Override
+    public String addRegs() {
+        return null;
+    }
+
+    @Override
+    public String canRegs() {
+        return null;
+    }
+
+    @Override
+    public String delRegs() {
+        return null;
+    }
+
+    @Override
+    public String selRegs() {
+        return null;
     }
 
     public int getId() {

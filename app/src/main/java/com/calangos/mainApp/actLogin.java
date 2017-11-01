@@ -25,12 +25,16 @@ public class actLogin extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent i = new Intent(actLogin.this, actMenuAtleta.class);
-                startActivity(i);
+                /**
+                 * Intent i = new Intent(actLogin.this, actMenuAtleta.class);
+                 * startActivity(i);                 *
+                 */
             }
         });
 
     }
+
+
 
 
 }

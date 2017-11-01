@@ -8,6 +8,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.calangos.mainApp.dao.manData;
 import com.calangos.mainApp.dao.temp.dbControll;
 import com.calangos.mainApp.models.cAtleta;
 
@@ -15,11 +16,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class actCadastroAtleta extends AppCompatActivity {
+public class actCadastroAtleta extends AppCompatActivity implements manData {
 
     private EditText nm,rg,cpf,end,email,senha;
     private ImageButton btCad;
-    private List<cAtleta> atleta;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -38,12 +38,61 @@ public class actCadastroAtleta extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                String result = addRegs();
+                Toast.makeText(getApplicationContext(), "Obrigado "+result+" por se cadastrar", Toast.LENGTH_SHORT).show();
+
                 Intent i = new Intent(actCadastroAtleta.this, actLogin.class);
                 startActivity(i);
+
             }
         });
 
     }
+
+    @Override
+    public String opeTrans() {
+        return null;
+    }
+
+    @Override
+    public String addRegs() {
+
+        String result;
+
+        String _nome = nm.getText().toString();
+        int _rg = Integer.parseInt(rg.getText().toString());
+        int _cpf = Integer.parseInt(cpf.getText().toString());
+        String _email = email.getText().toString();
+        String _senha = senha.getText().toString();
+        String _endereco = end.getText().toString();
+
+        cAtleta atleta = new cAtleta(0,_nome,_rg,_cpf,_email,_senha,_endereco);
+        result = atleta.addAtleta(_nome,_rg,_cpf,_email,_senha,_endereco, getApplicationContext());
+
+        return result;
+    }
+
+    @Override
+    public String canRegs() {
+        return null;
+    }
+
+    @Override
+    public String delRegs() {
+        return null;
+    }
+
+    @Override
+    public String selRegs() {
+        return null;
+    }
+
+    @Override
+    public void onPointerCaptureChanged(boolean hasCapture) {
+
+    }
+
+
 
     public EditText getNm() {
         return nm;
@@ -100,4 +149,5 @@ public class actCadastroAtleta extends AppCompatActivity {
     public void setBtCad(ImageButton btCad) {
         this.btCad = btCad;
     }
+
 }
