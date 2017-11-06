@@ -1,32 +1,44 @@
 package com.calangos.mainApp.models;
 
+import com.calangos.mainApp.utils._Default;
+
 /**
  * Created by rafael on 25/10/17.
  */
 
-public abstract class cPessoa {
+public abstract class cPessoa extends _Default {
 
-    private  int id;
+    private int id;
     private String nome;
-    private int rg;
-    private int cpf;
+    private long rg;
+    private long cpf;
     private String email;
     private String senha;
     private String endereco;
+    private int ativo;
 
     //Metodo construtor
-    public cPessoa(int id, String nome, int rg, int cpf, String email, String senha, String endereco) {
-        this.id = id;
-        this.nome = nome;
-        this.rg = rg;
-        this.cpf = cpf;
-        this.email = email;
-        this.senha = senha;
-        this.endereco = endereco;
+    public cPessoa() {
+        this.id = -1;
+        this.nome = "";
+        this.rg = 0;
+        this.cpf = 0;
+        this.email = "";
+        this.senha = "";
+        this.endereco = "";
     }
 
 
     //Metodos de encapsulamento
+
+    public int getAtivo() {
+        return ativo;
+    }
+
+    public void setAtivo(int ativo) {
+        this.ativo = ativo;
+    }
+
     public int getId() {
         return id;
     }
@@ -43,19 +55,19 @@ public abstract class cPessoa {
         this.nome = nome;
     }
 
-    public int getRg() {
+    public long getRg() {
         return rg;
     }
 
-    public void setRg(int rg) {
+    public void setRg(long rg) {
         this.rg = rg;
     }
 
-    public int getCpf() {
+    public long getCpf() {
         return cpf;
     }
 
-    public void setCpf(int cpf) {
+    public void setCpf(long cpf) {
         this.cpf = cpf;
     }
 

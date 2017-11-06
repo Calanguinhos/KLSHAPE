@@ -14,8 +14,8 @@ public class cInstrutor extends cPessoa {
 
     List<cInstrutor> instrutores;
 
-    public cInstrutor(int id, String nome, int rg, int cpf, String email, String senha, String endereco) {
-        super(id, nome, rg, cpf, email, senha, endereco);
+    public cInstrutor() {
+        super();
     }
 
     public String addInstrutor(String nome, int rg, int cpf, String email, String senha, String endereco, Context context) {

@@ -201,7 +201,6 @@
             android:src="@mipmap/botao_cadastro" />
 
         <ImageButton
-            android:id="@+id/imageButton5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignTop="@+id/btCadc"
@@ -397,7 +396,6 @@
         android:layout_marginStart="14dp" />
 
     <ImageButton
-        android:id="@+id/btExcluir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/imageView5"

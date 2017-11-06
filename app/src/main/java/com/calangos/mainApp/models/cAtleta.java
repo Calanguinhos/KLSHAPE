@@ -4,7 +4,9 @@ import android.content.Context;
 import android.widget.Toast;
 
 import com.calangos.mainApp.MainActivity;
+import com.calangos.mainApp.dao.DB;
 
+import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,61 +16,55 @@ import java.util.List;
 
 public class cAtleta extends cPessoa {
 
-    //private MainActivity main = new MainActivity();
-    List<cAtleta> atletas;
+    private String comando = "";
 
-    public cAtleta(int id, String nome, int rg, int cpf, String email, String senha, String endereco) {
-        super(id, nome, rg, cpf, email, senha, endereco);
+    public cAtleta() {
+        super();
+        this.setId(-1);
+        this.setNome("");
+        this.setEmail("");
+        this.setSenha("");
+        this.setRg(0);
+        this.setCpf(0);
+        this.setAtivo(0);
     }
 
-    public String addAtleta(String nome, int rg, int cpf, String email, String senha, String endereco, Context context) {
+    public void salvar(){
 
-        atletas = new ArrayList<>();
-
-        try {
-            setNome(nome);
-            setRg(rg);
-            setCpf(cpf);
-            setEndereco(endereco);
-            setEmail(email);
-            setSenha(senha);
-        } catch (NullPointerException e) {
-            Toast.makeText(context, "Você deve preencher todos os campos!!!", Toast.LENGTH_SHORT).show();
-        } catch (NumberFormatException f){
-            Toast.makeText(context, "Verifique o CPF e o RG", Toast.LENGTH_SHORT).show();
-        } finally {
-            Toast.makeText(context, "Cadastro realizado com Sucesso!!!", Toast.LENGTH_SHORT).show();
+        if (this.getId() == -1){
+            setComando(String.format("INSERT INTO `klshape`.`ALUNOS` (`ALU_NOME`, `ALU_RG`, `ALU_CPF`, `ALU_ENDERECO`, `ALU_ATIVO`, `ALU_EMAIL`, `ALU_SENHA`)" +
+                            "VALUES ('%s','%d','%d','%s','%d','%s','%s');",
+                    this.getNome(),this.getRg(),this.getCpf(),this.getEndereco(),1,this.getEmail(),this.getSenha()));
+        }else{
+            setComando(String.format("UPDATE ALUNOS SET ALU_NOME = '%s', " +
+                            "ALU_EMAIL = '%s', " +
+                            "ALU_SENHA = '%s', " +
+                            "ALU_ENDERECO = '%s', " +
+                            "ALU_RG = '%d', " +
+                            "ALU_CPF = '%d'," +
+                            "ALU_ATIVO = 1 " +
+                            "WHERE ID_ALUNOS = %d;",
+                    this.getNome(),this.getEmail(),this.getSenha(),this.getEndereco(),this.getRg(),this.getCpf(),this.getId()));
         }
-
-        atletas.add(this);
-
-        return String.valueOf(atletas.get(0).getNome());
-
+        DB db = new DB();
+        db.execute(getComando());
+        this._mensagem = db.get_mensagem();
+        this._status = db.is_status();
     }
 
-    public String valLogin(String user, String password, Context context){
-
-        atletas = new ArrayList<>();
-        // main.instrutores = new ArrayList<>();
-        String result = "NEGADO";
-
-        Toast.makeText(context, atletas.get(0).getNome(), Toast.LENGTH_SHORT).show();
-
-        for (int i=0; i>atletas.size();i++){
-            if (user == atletas.get(i).getEmail() &&
-                    password == atletas.get(i).getSenha()){
-                result = "LIBERADO \n" +
-                        "Nome: "+atletas.get(i).getNome() +"\n" +
-                        "Email: "+atletas.get(i).getEmail();
-            } else {
-                result = "NEGADO \n" +
-                        "Nome: "+atletas.get(i).getNome() +"\n" +
-                        "Email: "+atletas.get(i).getEmail();
-            }
-        }
-
-        return result;
-
+    public void apagar(){
+        comando = String.format("DELETE FROM ALUNOS WHERE id = %d;",this.getId());
+        DB db = new DB();
+        db.execute(comando);
+        this._mensagem = db.get_mensagem();
+        this._status = db.is_status();
     }
 
+    public String getComando() {
+        return comando;
+    }
+
+    public void setComando(String comando) {
+        this.comando = comando;
+    }
 }

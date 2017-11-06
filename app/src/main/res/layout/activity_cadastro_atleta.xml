@@ -183,7 +183,6 @@
         android:layout_marginStart="14dp" />
 
     <ImageButton
-        android:id="@+id/imageButton5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@mipmap/botao_limpar"
@@ -193,7 +192,6 @@
         android:layout_toRightOf="@+id/btCadc" />
 
     <ImageView
-        android:id="@+id/imageView6"
         android:layout_width="250dp"
         android:layout_height="60dp"
         android:layout_below="@+id/imageView8"

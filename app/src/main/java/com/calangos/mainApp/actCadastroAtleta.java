@@ -16,6 +16,7 @@ public class actCadastroAtleta extends AppCompatActivity implements manData {
 
     private EditText nm,rg,cpf,end,email,senha;
     private ImageButton btCad;
+    private cAtleta atleta = new cAtleta();
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -56,15 +57,22 @@ public class actCadastroAtleta extends AppCompatActivity implements manData {
 
         String result;
 
-        String _nome = nm.getText().toString();
-        int _rg = Integer.parseInt(rg.getText().toString());
-        int _cpf = Integer.parseInt(cpf.getText().toString());
-        String _email = email.getText().toString();
-        String _senha = senha.getText().toString();
-        String _endereco = end.getText().toString();
+        atleta.setNome(nm.getText().toString());
+        atleta.setRg(Integer.parseInt(rg.getText().toString()));
+        atleta.setCpf(Integer.parseInt(cpf.getText().toString()));
+        atleta.setEmail(email.getText().toString());
+        atleta.setSenha(senha.getText().toString());
+        atleta.setEndereco(end.getText().toString());
 
-        cAtleta atleta = new cAtleta(0,_nome,_rg,_cpf,_email,_senha,_endereco);
-        result = atleta.addAtleta(_nome,_rg,_cpf,_email,_senha,_endereco, getApplicationContext());
+        try{
+            Toast.makeText(getApplicationContext(), "Enviando dados", Toast.LENGTH_SHORT).show();
+            atleta.salvar();
+        } catch (Exception e) {
+            result = e.getMessage();
+            Toast.makeText(getApplicationContext(), "Erro: "+result, Toast.LENGTH_SHORT).show();
+        } finally {
+            result = atleta.getNome();
+        }
 
         return result;
     }
@@ -94,8 +102,6 @@ public class actCadastroAtleta extends AppCompatActivity implements manData {
         super.onBackPressed();
         this.finish();
     }
-
-
 
     public EditText getNm() {
         return nm;

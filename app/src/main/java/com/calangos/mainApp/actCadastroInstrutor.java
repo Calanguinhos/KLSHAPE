@@ -62,7 +62,7 @@ public class actCadastroInstrutor extends AppCompatActivity implements manData {
         String _email = email.getText().toString();
         String _senha = senha.getText().toString();
 
-        cInstrutor atleta = new cInstrutor(0,_nome,_rg,_cpf,_email,_senha,_endereco);
+        cInstrutor atleta = new cInstrutor();
         result = atleta.addInstrutor(_nome,_rg,_cpf,_email,_senha,_endereco, getApplicationContext());
 
         return result;

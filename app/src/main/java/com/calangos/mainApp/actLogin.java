@@ -8,19 +8,14 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-import com.calangos.mainApp.dao.webServiceClient;
 import com.calangos.mainApp.models.cAtleta;
-import com.calangos.mainApp.models.cInstrutor;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class actLogin extends AppCompatActivity {
 
     protected EditText edtEmail, edtSenha;
     private ImageButton btnLogin;
 
-    private cAtleta atleta = new cAtleta(0,null,0,0,null,null,null);
+    private cAtleta atleta = new cAtleta();
 
     //private MainActivity main = new MainActivity();
 
@@ -40,7 +35,7 @@ public class actLogin extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                String result = atleta.valLogin(edtEmail.getText().toString(), edtSenha.getText().toString(), getApplicationContext());
+                String result = "NADA FEITO"; //atleta.valLogin(edtEmail.getText().toString(), edtSenha.getText().toString(), getApplicationContext());
                 Toast.makeText(getApplicationContext(), "Processando "+result, Toast.LENGTH_SHORT).show();
 
                 if (result == "LIBERADO"){
