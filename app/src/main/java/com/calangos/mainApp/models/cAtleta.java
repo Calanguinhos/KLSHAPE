@@ -5,9 +5,11 @@ import android.widget.Toast;
 
 import com.calangos.mainApp.MainActivity;
 import com.calangos.mainApp.dao.DB;
+import com.calangos.mainApp.dao.webService;
 
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -30,26 +32,9 @@ public class cAtleta extends cPessoa {
     }
 
     public void salvar(){
+        HashMap<String, String> data = new HashMap<>();
 
-        if (this.getId() == -1){
-            setComando(String.format("INSERT INTO `klshape`.`alunos` (`ALU_NOME`, `ALU_RG`, `ALU_CPF`, `ALU_ENDERECO`, `ALU_ATIVO`, `ALU_EMAIL`, `ALU_SENHA`)" +
-                            "VALUES ('%s','%d','%d','%s','%d','%s','%s');",
-                    this.getNome(),this.getRg(),this.getCpf(),this.getEndereco(),1,this.getEmail(),this.getSenha()));
-        }else{
-            setComando(String.format("UPDATE alunos SET ALU_NOME = '%s', " +
-                            "ALU_EMAIL = '%s', " +
-                            "ALU_SENHA = '%s', " +
-                            "ALU_ENDERECO = '%s', " +
-                            "ALU_RG = '%d', " +
-                            "ALU_CPF = '%d'," +
-                            "ALU_ATIVO = '1' " +
-                            "WHERE ID_ALUNOS = %d;",
-                    this.getNome(),this.getEmail(),this.getSenha(),this.getEndereco(),this.getRg(),this.getCpf(),this.getId()));
-        }
-        DB db = new DB();
-        db.execute(getComando());
-        this._mensagem = db.get_mensagem();
-        this._status = db.is_status();
+        data.put("alu_nome", getNome());
     }
 
     public void apagar(){

@@ -9,6 +9,7 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.calangos.mainApp.dao.manData;
+import com.calangos.mainApp.dao.webService;
 import com.calangos.mainApp.models.cAtleta;
 
 
@@ -35,12 +36,15 @@ public class actCadastroAtleta extends AppCompatActivity implements manData {
             @Override
             public void onClick(View v) {
 
-                String result = addRegs();
-                Toast.makeText(getApplicationContext(), "Obrigado "+result+" por se cadastrar", Toast.LENGTH_SHORT).show();
+                webService service = new webService();
 
-                Intent i = new Intent(actCadastroAtleta.this, actCadastro.class);
-                startActivity(i);
-                finish();
+                if (service.Connected(getApplicationContext())){
+
+                    Toast.makeText(getApplicationContext(),"Acesso à internet!", Toast.LENGTH_SHORT).show();
+
+                } else {
+                    Toast.makeText(getApplicationContext(),"Sem acesso à internet!", Toast.LENGTH_SHORT).show();
+                }
 
             }
         });
