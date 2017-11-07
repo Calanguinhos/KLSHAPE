@@ -32,17 +32,17 @@ public class cAtleta extends cPessoa {
     public void salvar(){
 
         if (this.getId() == -1){
-            setComando(String.format("INSERT INTO `klshape`.`ALUNOS` (`ALU_NOME`, `ALU_RG`, `ALU_CPF`, `ALU_ENDERECO`, `ALU_ATIVO`, `ALU_EMAIL`, `ALU_SENHA`)" +
+            setComando(String.format("INSERT INTO `klshape`.`alunos` (`ALU_NOME`, `ALU_RG`, `ALU_CPF`, `ALU_ENDERECO`, `ALU_ATIVO`, `ALU_EMAIL`, `ALU_SENHA`)" +
                             "VALUES ('%s','%d','%d','%s','%d','%s','%s');",
                     this.getNome(),this.getRg(),this.getCpf(),this.getEndereco(),1,this.getEmail(),this.getSenha()));
         }else{
-            setComando(String.format("UPDATE ALUNOS SET ALU_NOME = '%s', " +
+            setComando(String.format("UPDATE alunos SET ALU_NOME = '%s', " +
                             "ALU_EMAIL = '%s', " +
                             "ALU_SENHA = '%s', " +
                             "ALU_ENDERECO = '%s', " +
                             "ALU_RG = '%d', " +
                             "ALU_CPF = '%d'," +
-                            "ALU_ATIVO = 1 " +
+                            "ALU_ATIVO = '1' " +
                             "WHERE ID_ALUNOS = %d;",
                     this.getNome(),this.getEmail(),this.getSenha(),this.getEndereco(),this.getRg(),this.getCpf(),this.getId()));
         }

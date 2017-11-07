@@ -16,7 +16,7 @@ import java.sql.ResultSet;
 public class DB extends _Default implements Runnable {
 
     private Connection conn;
-    private String host = "10.42.0.1";
+    private String host = "192.168.1.70";
     private String db = "klshape";
     private int port = 3306;
     private String user = "klshapeuser";
