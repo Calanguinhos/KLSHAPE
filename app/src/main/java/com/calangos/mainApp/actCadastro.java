@@ -9,14 +9,14 @@ import android.widget.ImageButton;
 
 public class actCadastro extends AppCompatActivity {
 
-    ImageButton imgbtn1,imgbtn2;
+    ImageButton imgbtn1, imgbtn2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro);
-        imgbtn1 = (ImageButton) findViewById(R.id.imgbtn1);
-        imgbtn2 = (ImageButton) findViewById(R.id.imgbtn2);
+        imgbtn1 = findViewById(R.id.imgbtn1);
+        imgbtn2 = findViewById(R.id.imgbtn2);
 
         imgbtn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,7 +37,7 @@ public class actCadastro extends AppCompatActivity {
     }
 
     @Override
-    public void onBackPressed(){
+    public void onBackPressed() {
         super.onBackPressed();
         this.finish();
     }

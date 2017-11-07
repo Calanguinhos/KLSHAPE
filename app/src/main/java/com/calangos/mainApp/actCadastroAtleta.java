@@ -1,26 +1,22 @@
 package com.calangos.mainApp;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
-import com.calangos.mainApp.dao.manData;
-import com.calangos.mainApp.dao.webService;
 import com.calangos.mainApp.models.cAtleta;
 
 
-public class actCadastroAtleta extends AppCompatActivity implements manData {
+public class actCadastroAtleta extends AppCompatActivity {
 
-    private EditText nm,rg,cpf,end,email,senha;
+    private EditText nm, rg, cpf, end, email, senha;
     private ImageButton btCad;
     private cAtleta atleta = new cAtleta();
 
     @Override
-    protected void onCreate(Bundle savedInstanceState){
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro_atleta);
 
@@ -32,19 +28,9 @@ public class actCadastroAtleta extends AppCompatActivity implements manData {
         senha = findViewById(R.id.senha);
         btCad = findViewById(R.id.btCadc);
 
-        btCad.setOnClickListener(new View.OnClickListener(){
+        btCad.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                webService service = new webService();
-
-                if (service.Connected(getApplicationContext())){
-
-                    Toast.makeText(getApplicationContext(),"Acesso à internet!", Toast.LENGTH_SHORT).show();
-
-                } else {
-                    Toast.makeText(getApplicationContext(),"Sem acesso à internet!", Toast.LENGTH_SHORT).show();
-                }
 
             }
         });
@@ -52,57 +38,7 @@ public class actCadastroAtleta extends AppCompatActivity implements manData {
     }
 
     @Override
-    public String opeTrans() {
-        return null;
-    }
-
-    @Override
-    public String addRegs() {
-
-        String result;
-
-        atleta.setNome(nm.getText().toString());
-        atleta.setRg(Integer.parseInt(rg.getText().toString()));
-        atleta.setCpf(Integer.parseInt(cpf.getText().toString()));
-        atleta.setEmail(email.getText().toString());
-        atleta.setSenha(senha.getText().toString());
-        atleta.setEndereco(end.getText().toString());
-
-        try{
-            Toast.makeText(getApplicationContext(), "Enviando dados", Toast.LENGTH_SHORT).show();
-            atleta.salvar();
-        } catch (Exception e) {
-            result = e.getMessage();
-            Toast.makeText(getApplicationContext(), "Erro: "+result, Toast.LENGTH_SHORT).show();
-        } finally {
-            result = atleta.getNome();
-        }
-
-        return result;
-    }
-
-    @Override
-    public String canRegs() {
-        return null;
-    }
-
-    @Override
-    public String delRegs() {
-        return null;
-    }
-
-    @Override
-    public String selRegs() {
-        return null;
-    }
-
-    @Override
-    public void onPointerCaptureChanged(boolean hasCapture) {
-
-    }
-
-    @Override
-    public void onBackPressed(){
+    public void onBackPressed() {
         super.onBackPressed();
         this.finish();
     }

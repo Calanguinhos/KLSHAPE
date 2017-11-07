@@ -1,11 +1,8 @@
 package com.calangos.mainApp;
 
 import android.app.Activity;
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -16,7 +13,7 @@ import android.widget.Toast;
 
 public class actMenuAtleta extends Activity {
 
-     private ImageView btnEnvNot;
+    private ImageView btnEnvNot;
     private ImageButton btnRecFor;
 
     @Override
@@ -45,7 +42,7 @@ public class actMenuAtleta extends Activity {
     }
 
     @Override
-    public void onBackPressed(){
+    public void onBackPressed() {
         super.onBackPressed();
         this.finish();
     }

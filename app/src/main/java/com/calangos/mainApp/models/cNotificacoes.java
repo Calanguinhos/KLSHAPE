@@ -13,13 +13,13 @@ public class cNotificacoes {
     private cAtleta aluno;
     private cInstrutor instrutor;
 
-    public cNotificacoes(int id, String nome, String descricao, String tipo, cAtleta aluno, cInstrutor instrutor) {
-        this.id = id;
-        this.nome = nome;
-        this.descricao = descricao;
-        this.tipo = tipo;
-        this.aluno = aluno;
-        this.instrutor = instrutor;
+    public cNotificacoes() {
+        this.id = 0;
+        this.nome = "";
+        this.descricao = "";
+        this.tipo = "";
+        this.aluno = new cAtleta();
+        this.instrutor = new cInstrutor();
     }
 
     public int getId() {

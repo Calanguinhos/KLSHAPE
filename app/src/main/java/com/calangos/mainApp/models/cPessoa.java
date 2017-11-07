@@ -19,6 +19,7 @@ public abstract class cPessoa extends _Default {
 
     //Metodo construtor
     public cPessoa() {
+        super();
         this.id = -1;
         this.nome = "";
         this.rg = 0;
@@ -26,6 +27,7 @@ public abstract class cPessoa extends _Default {
         this.email = "";
         this.senha = "";
         this.endereco = "";
+        this.ativo = 0;
     }
 
 

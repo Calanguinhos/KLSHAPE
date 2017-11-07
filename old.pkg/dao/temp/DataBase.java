@@ -6,12 +6,16 @@ package com.calangos.mainApp.dao.temp;
 import android.content.Context;
 import android.database.sqlite.*;
 
+import static android.content.Context.MODE_PRIVATE;
+import static android.database.sqlite.SQLiteDatabase.openOrCreateDatabase;
+
 
 public class DataBase extends SQLiteOpenHelper{
     
-    static final String NOME_BANCO = "KLShape.db";
+    static final String NOME_BANCO = "KLShape.sqlite";
     static final String TABELA  = "";
     static final int VERSAO = 1;
+    private SQLiteDatabase sqLiteDatabase;
     
     static final String ALU_NOME = "Alu_nome";
     static final String ALU_END = "Alu_endereco";
@@ -27,7 +31,7 @@ public class DataBase extends SQLiteOpenHelper{
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        //db.execSQL(ScriptSQL.getCreateDATABASE());
+        db = openOrCreateDatabase(NOME_BANCO, null);
         db.execSQL(ScriptSQL.getCreateALUNOS());
         db.execSQL(ScriptSQL.getCreateEXERCICIOS());
         db.execSQL(ScriptSQL.getCreateINSTRUTORES());

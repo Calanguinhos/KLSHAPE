@@ -1,5 +1,6 @@
 package com.calangos.mainApp.models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -11,13 +12,13 @@ public class cTreinamento {
     private cAtleta atleta;
     private cInstrutor intrutor;
     private List<cExercicio> exercicio;
-    private cNotificacoes notificacoes = new cNotificacoes(0,null,null,null,null,null);
+    private cNotificacoes notificacoes;
 
-    public cTreinamento(cAtleta atleta, cInstrutor intrutor, List<cExercicio> exercicio, cNotificacoes notificacoes) {
-        this.atleta = atleta;
-        this.intrutor = intrutor;
-        this.exercicio = exercicio;
-        this.notificacoes = notificacoes;
+    public cTreinamento() {
+        this.atleta = new cAtleta();
+        this.intrutor = new cInstrutor();
+        this.exercicio = new ArrayList<>();
+        this.notificacoes = new cNotificacoes();
     }
 
     public cAtleta getAtleta() {
