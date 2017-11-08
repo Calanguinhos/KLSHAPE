@@ -21,9 +21,8 @@
         <activity android:name="com.calangos.mainApp.actInstNotificacao" />
         <activity android:name="com.calangos.mainApp.actInsFicha" />
         <activity android:name="com.calangos.mainApp.actMenuAtleta" />
-        <activity android:name="com.calangos.mainApp.actCadastroAtleta" />
-        <activity android:name="com.calangos.mainApp.actCadastroInstrutor" />
-        <activity android:name="com.calangos.mainApp.actLogin"></activity>
+        <activity android:name="com.calangos.mainApp.actLogin"/>
+        <activity android:name="com.calangos.mainApp.actMensagemCadastro"/>
     </application>
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />

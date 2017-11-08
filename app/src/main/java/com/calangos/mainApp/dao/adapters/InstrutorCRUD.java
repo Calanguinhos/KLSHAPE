@@ -1,35 +1,42 @@
 package com.calangos.mainApp.dao.adapters;
 
-import com.calangos.mainApp.dao.ObjectCRUD;
-import com.calangos.mainApp.models.cInstrutor;
+import android.content.Context;
+
+import com.calangos.mainApp.utils.$ObjectCRUD;
+import com.calangos.mainApp.models.Instrutor;
 
 /**
  * Created by rafael on 07/11/17.
  */
 
-public class InstrutorCRUD extends cInstrutor implements ObjectCRUD {
+public class InstrutorCRUD extends Instrutor implements $ObjectCRUD {
 
-    public InstrutorCRUD() {
+    protected String TABLE_NAME = "INSTRUTORES";
+    protected String NULL_COLUMN_HACK = null;
+    private Context context;
+
+    public InstrutorCRUD(Context context) {
         super();
+        this.context = context;
     }
 
     @Override
-    public String createObject() {
-        return null;
+    public void createObject() {
+        
     }
 
     @Override
-    public String readObject() {
-        return null;
+    public void readObject() {
+        
     }
 
     @Override
-    public String updateObject() {
-        return null;
+    public void updateObject() {
+        
     }
 
     @Override
-    public String deleteObject() {
-        return null;
+    public void deleteObject() {
+        
     }
 }

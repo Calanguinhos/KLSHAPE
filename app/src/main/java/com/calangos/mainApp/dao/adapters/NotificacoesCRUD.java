@@ -1,35 +1,35 @@
 package com.calangos.mainApp.dao.adapters;
 
-import com.calangos.mainApp.dao.ObjectCRUD;
-import com.calangos.mainApp.models.cNotificacoes;
+import com.calangos.mainApp.utils.$ObjectCRUD;
+import com.calangos.mainApp.models.Notificacoes;
 
 /**
  * Created by rafael on 07/11/17.
  */
 
-public class NotificacoesCRUD extends cNotificacoes implements ObjectCRUD {
+public class NotificacoesCRUD extends Notificacoes implements $ObjectCRUD {
 
     public NotificacoesCRUD() {
         super();
     }
 
     @Override
-    public String createObject() {
-        return null;
+    public void createObject() {
+
     }
 
     @Override
-    public String readObject() {
-        return null;
+    public void readObject() {
+
     }
 
     @Override
-    public String updateObject() {
-        return null;
+    public void updateObject() {
+
     }
 
     @Override
-    public String deleteObject() {
-        return null;
+    public void deleteObject() {
+
     }
 }

@@ -8,24 +8,24 @@ import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ImageButton btn1, btn2;
+    private ImageButton btnLogin, btnCadastrar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btn1 = findViewById(R.id.btn1);
-        btn2 = findViewById(R.id.btn2);
+        btnLogin = findViewById(R.id.imageButtonLogin);
+        btnCadastrar = findViewById(R.id.imageButtonCadastrar);
 
-        btn1.setOnClickListener(new View.OnClickListener() {
+        btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent a = new Intent(MainActivity.this, actLogin.class);
                 startActivity(a);
             }
         });
-        btn2.setOnClickListener(new View.OnClickListener() {
+        btnCadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, actCadastro.class);

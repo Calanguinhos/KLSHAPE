@@ -4,13 +4,13 @@ package com.calangos.mainApp.models;
  * Created by rafael on 25/10/17.
  */
 
-public class cExercicio {
+public class Exercicio {
 
     private int id;
     private String tipo;
     private String nome;
 
-    public cExercicio() {
+    public Exercicio() {
         this.id = 0;
         this.tipo = "";
         this.nome = "";

@@ -16,9 +16,9 @@ public class actLogin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        edtEmail = findViewById(R.id.edtEmail);
-        edtSenha = findViewById(R.id.editText5);
-        btnLogin = findViewById(R.id.btnLogin);
+        edtEmail = findViewById(R.id.editTextEmail);
+        edtSenha = findViewById(R.id.editTextSenha);
+        btnLogin = findViewById(R.id.imageButtonLogin);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override

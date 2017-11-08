@@ -9,6 +9,7 @@ tools:context=".actLogin">
 
 
 <ImageView
+    android:id="@+id/imageView3"
     android:layout_width="260dp"
     android:layout_height="500dp"
     android:src="@mipmap/funddo"
@@ -26,7 +27,7 @@ tools:context=".actLogin">
     android:src="@mipmap/logokl" />
 
     <EditText
-        android:id="@+id/edtEmail"
+        android:id="@+id/editTextEmail"
         android:layout_width="wrap_content"
         android:layout_height="45dp"
         android:layout_below="@+id/imageView"
@@ -35,36 +36,36 @@ tools:context=".actLogin">
         android:background="@android:color/background_light"
         android:backgroundTint="@android:color/white"
         android:ems="10"
+        android:hint="Email"
         android:inputType="textPersonName"
-        android:text="E-mail:"
         android:textColor="@android:color/background_dark"
         android:textColorLink="@android:color/background_light"
         tools:foregroundTint="@android:color/background_light" />
 
-<EditText
-    android:id="@+id/editText5"
-    android:layout_width="wrap_content"
-    android:layout_height="45dp"
+    <EditText
+        android:id="@+id/editTextSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
 
-    android:layout_marginTop="25dp"
-    android:background="@android:color/background_light"
-    android:backgroundTint="@android:color/white"
-    android:ems="10"
-    android:inputType="textPersonName"
-    android:text="Senha:"
-    android:textColor="@android:color/background_dark"
-    android:textColorLink="@android:color/background_light"
-    android:layout_below="@+id/edtEmail"
-    android:layout_alignLeft="@+id/edtEmail"
-    android:layout_alignStart="@+id/edtEmail" />
+        android:layout_alignLeft="@+id/editTextEmail"
+        android:layout_alignStart="@+id/editTextEmail"
+        android:layout_below="@+id/editTextEmail"
+        android:layout_marginTop="25dp"
+        android:background="@android:color/background_light"
+        android:backgroundTint="@android:color/white"
+        android:ems="10"
+        android:hint="Senha"
+        android:inputType="textPersonName"
+        android:textColor="@android:color/background_dark"
+        android:textColorLink="@android:color/background_light" />
 
     <ImageButton
-        android:id="@+id/btnLogin"
+        android:id="@+id/imageButtonLogin"
         android:layout_width="213dp"
         android:layout_height="50dp"
-        android:layout_alignEnd="@+id/editText5"
-        android:layout_alignRight="@+id/editText5"
-        android:layout_below="@+id/editText5"
+        android:layout_alignEnd="@+id/editTextSenha"
+        android:layout_alignRight="@+id/editTextSenha"
+        android:layout_below="@+id/editTextSenha"
         android:layout_marginTop="26dp"
         android:background="@android:color/transparent"
         android:src="@mipmap/botao_entrar" />

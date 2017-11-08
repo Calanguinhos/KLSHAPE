@@ -1,12 +1,14 @@
 package com.calangos.mainApp.models;
 
+import com.calangos.mainApp.utils._Pessoa;
+
 /**
  * Created by rafael on 25/10/17.
  */
 
-public class cAtleta extends cPessoa {
+public class Atleta extends _Pessoa {
 
-    public cAtleta() {
+    public Atleta() {
         super();
         this.setId(-1);
         this.setNome("");

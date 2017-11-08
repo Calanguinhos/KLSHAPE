@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 /**
@@ -13,25 +14,19 @@ import android.widget.Toast;
 
 public class actMenuAtleta extends Activity {
 
-    private ImageView btnEnvNot;
-    private ImageButton btnRecFor;
+    private ImageButton btnConsultaFicha;
+    private TextView txvNomeALuno, txvNomeInstrutor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_atleta);
 
-        btnEnvNot = findViewById(R.id.imageView17);
-        btnEnvNot.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        txvNomeALuno = findViewById(R.id.textViewNomeAtleta);
+        txvNomeInstrutor = findViewById(R.id.textViewNomeTreinador);
 
-                Toast.makeText(getApplicationContext(), "NOTIFICAÇÃO ENVIADA", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        btnRecFor = findViewById(R.id.imageButton8);
-        btnRecFor.setOnClickListener(new View.OnClickListener() {
+        btnConsultaFicha = findViewById(R.id.imageButtonConsutaFicha);
+        btnConsultaFicha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
