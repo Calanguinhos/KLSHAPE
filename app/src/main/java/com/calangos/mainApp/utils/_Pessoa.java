@@ -1,4 +1,4 @@
-package com.calangos.mainApp.models;
+package com.calangos.mainApp.utils;
 
 import com.calangos.mainApp.utils._Default;
 
@@ -6,7 +6,7 @@ import com.calangos.mainApp.utils._Default;
  * Created by rafael on 25/10/17.
  */
 
-public abstract class cPessoa extends _Default {
+public abstract class _Pessoa extends _Default {
 
     private int id;
     private String nome;
@@ -18,7 +18,8 @@ public abstract class cPessoa extends _Default {
     private int ativo;
 
     //Metodo construtor
-    public cPessoa() {
+    public _Pessoa() {
+        super();
         this.id = -1;
         this.nome = "";
         this.rg = 0;
@@ -26,6 +27,7 @@ public abstract class cPessoa extends _Default {
         this.email = "";
         this.senha = "";
         this.endereco = "";
+        this.ativo = 0;
     }
 
 

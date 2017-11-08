@@ -4,22 +4,22 @@ package com.calangos.mainApp.models;
  * Created by rafael on 27/10/17.
  */
 
-public class cNotificacoes {
+public class Notificacoes {
 
     private int id;
     private String nome;
     private String descricao;
     private String tipo;
-    private cAtleta aluno;
-    private cInstrutor instrutor;
+    private Atleta aluno;
+    private Instrutor Instrutor;
 
-    public cNotificacoes(int id, String nome, String descricao, String tipo, cAtleta aluno, cInstrutor instrutor) {
-        this.id = id;
-        this.nome = nome;
-        this.descricao = descricao;
-        this.tipo = tipo;
-        this.aluno = aluno;
-        this.instrutor = instrutor;
+    public Notificacoes() {
+        this.id = 0;
+        this.nome = "";
+        this.descricao = "";
+        this.tipo = "";
+        this.aluno = new Atleta();
+        this.Instrutor = new Instrutor();
     }
 
     public int getId() {
@@ -54,19 +54,19 @@ public class cNotificacoes {
         this.tipo = tipo;
     }
 
-    public cAtleta getAluno() {
+    public Atleta getAluno() {
         return aluno;
     }
 
-    public void setAluno(cAtleta aluno) {
+    public void setAluno(Atleta aluno) {
         this.aluno = aluno;
     }
 
-    public cInstrutor getInstrutor() {
-        return instrutor;
+    public Instrutor getInstrutor() {
+        return Instrutor;
     }
 
-    public void setInstrutor(cInstrutor instrutor) {
-        this.instrutor = instrutor;
+    public void setInstrutor(Instrutor Instrutor) {
+        this.Instrutor = Instrutor;
     }
 }

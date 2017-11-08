@@ -3,9 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/KLSHAPE.iml" filepath="$PROJECT_DIR$/KLSHAPE.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/KLSHAPE-app.iml" filepath="$PROJECT_DIR$/app/KLSHAPE-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Projects-KLSHAPE.iml" filepath="$PROJECT_DIR$/Projects-KLSHAPE.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/mysql-connector-java-5.1.44-bin/mysql-connector-java-5.1.44-bin.iml" filepath="$PROJECT_DIR$/mysql-connector-java-5.1.44-bin/mysql-connector-java-5.1.44-bin.iml" />
-      <module fileurl="file://D:\Users\Rafael Gomides\Documents\Projetos\KLSHAPE\mysql-connector-java-5.1.44-bin\mysql-connector-java-5.1.44-bin.iml" filepath="D:\Users\Rafael Gomides\Documents\Projetos\KLSHAPE\mysql-connector-java-5.1.44-bin\mysql-connector-java-5.1.44-bin.iml" />
     </modules>
   </component>
 </project>
