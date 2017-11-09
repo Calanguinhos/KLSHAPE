@@ -3,7 +3,6 @@ package com.calangos.mainApp.dao.adapters;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
-import android.widget.Toast;
 
 import com.calangos.mainApp.dao.CRUD;
 import com.calangos.mainApp.models.Atleta;
