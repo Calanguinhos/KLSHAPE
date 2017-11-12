@@ -61,42 +61,42 @@ public class DB extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
 
         db.execSQL("CREATE TABLE IF NOT EXISTS ALUNOS (" +
-                "        _Id_Alunos    INTEGER    NOT NULL PRIMARY KEY AUTOINCREMENT," +
-                "        Alu_Nome   VARCHAR(50) NOT NULL," +
-                "        Alu_RG     VARCHAR(9)  NOT NULL," +
-                "        Alu_CPF    VARCHAR(9)  NOT NULL," +
-                "        Alu_Endereco VARCHAR(50) NOT NULL," +
-                "        Alu_Email VARCHAR(60) NOT NULL," +
-                "        Alu_Senha    VARCHAR(25) NOT NULL);" +
+                "        _ID_ALUNOS    INTEGER    NOT NULL PRIMARY KEY AUTOINCREMENT," +
+                "        ALU_NOME   VARCHAR(50) NOT NULL," +
+                "        ALU_RG     VARCHAR(9)  NOT NULL," +
+                "        ALU_CPF    VARCHAR(9)  NOT NULL," +
+                "        ALU_ENDERECO VARCHAR(50) NOT NULL," +
+                "        ALU_EMAIL VARCHAR(60) NOT NULL," +
+                "        ALU_SENHA    VARCHAR(25) NOT NULL);" +
                 "" +
                 "        CREATE TABLE IF NOT EXISTS EXERCICIOS(" +
-                "        _Id_Exercicios    INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT," +
-                "        Exe_Nome VARCHAR(45) NOT NULL," +
-                "        Exe_Data Date NOT NULL);" +
+                "        _ID_EXERCICIOS    INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT," +
+                "        EXE_NOME VARCHAR(45) NOT NULL," +
+                "        EXE_DATA DATE NOT NULL);" +
                 "" +
                 "        CREATE TABLE IF NOT EXISTS NOTIFICACOES(" +
-                "        _Id_Notifiacoes   INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT," +
-                "        Not_Nome VARCHAR(45) NOT NULL," +
-                "        Not_Descricao VARCHAR(45) NOT NULL," +
-                "        Not_Tipo VARCHAR(45) NOT NULL," +
-                "        CONSTRAINT Alunos_Id_Alunos FOREIGN KEY REFERENCES ALUNOS," +
-                "        CONSTRAINT Instrutores_Id_Instrutores FOREING KEY REFERENCES INSTRUTORES);" +
+                "        _ID_NOTIFIACOES   INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT," +
+                "        NOT_NOME VARCHAR(45) NOT NULL," +
+                "        NOT_DESCRICAO VARCHAR(45) NOT NULL," +
+                "        NOT_TIPO VARCHAR(45) NOT NULL," +
+                "        CONSTRAINT ALUNOS_ID_ALUNOS FOREIGN KEY REFERENCES ALUNOS," +
+                "        CONSTRAINT INSTRUTORES_ID_INSTRUTORES FOREING KEY REFERENCES INSTRUTORES);" +
                 "" +
                 "        CREATE TABLE IF NOT EXISTS INSTRUTORES(" +
-                "        _Id_Instrutores INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT," +
-                "        Ins_Nome VARCHAR(45) NOT NULL," +
-                "        Ins_RG VARCHAR(9) NOT NULL," +
-                "        Ins_CPF VARCHAR(9) NOT NULL," +
-                "        Ins_Endereco VARCHAR(45) NOT NULL," +
-                "        Ins_Email VARCHAR(45) NOT NULL," +
-                "        Ins_Senha VARCHAR(45) NOT NULL);" +
+                "        _ID_INSTRUTORES INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT," +
+                "        INS_NOME VARCHAR(45) NOT NULL," +
+                "        INS_RG VARCHAR(9) NOT NULL," +
+                "        INS_CPF VARCHAR(9) NOT NULL," +
+                "        INS_ENDERECO VARCHAR(45) NOT NULL," +
+                "        INS_EMAIL VARCHAR(45) NOT NULL," +
+                "        INS_SENHA VARCHAR(45) NOT NULL);" +
                 "" +
                 "        CREATE TABLE IF NOT EXISTS TREINAMENTOS(" +
-                "        _Id_Treinamentos INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT," +
-                "        CONSTRAINT Notificacoes_Id_Notificacoes FOREING KEY REFERENCES NOTIFICACOES," +
-                "        CONSTRAINT Notificacoes_Alunos_Id_Alunos FOREING KEY REFERENCES NOTIFICACOES," +
-                "        CONSTRAINT Notificacoes_Instrutores_Id_Instrutores FOREING KEY REFERENCES NOTIFICACOES," +
-                "        CONSTRAINT Exercicios_Id_Exercicio FOREING KEY REFERENCES EXERCICIOS);");
+                "        _ID_TREINAMENTOS INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT," +
+                "        CONSTRAINT NOTIFICACOES_ID_NOTIFICACOES FOREING KEY REFERENCES NOTIFICACOES," +
+                "        CONSTRAINT NOTIFICACOES_ALUNOS_ID_ALUNOS FOREING KEY REFERENCES NOTIFICACOES," +
+                "        CONSTRAINT NOTIFICACOES_INSTRUTORES_ID_INSTRUTORES FOREING KEY REFERENCES NOTIFICACOES," +
+                "        CONSTRAINT EXERCICIOS_ID_EXERCICIO FOREING KEY REFERENCES EXERCICIOS);");
 
     }
 

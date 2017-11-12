@@ -10,8 +10,8 @@ public class Notificacoes {
     private String nome;
     private String descricao;
     private String tipo;
-    private Atleta aluno;
-    private Instrutor Instrutor;
+    protected Atleta aluno;
+    protected Instrutor instrutor;
 
     public Notificacoes() {
         this.id = 0;
@@ -19,7 +19,7 @@ public class Notificacoes {
         this.descricao = "";
         this.tipo = "";
         this.aluno = new Atleta();
-        this.Instrutor = new Instrutor();
+        this.instrutor = new Instrutor();
     }
 
     public int getId() {
@@ -63,10 +63,10 @@ public class Notificacoes {
     }
 
     public Instrutor getInstrutor() {
-        return Instrutor;
+        return instrutor;
     }
 
     public void setInstrutor(Instrutor Instrutor) {
-        this.Instrutor = Instrutor;
+        this.instrutor = Instrutor;
     }
 }
