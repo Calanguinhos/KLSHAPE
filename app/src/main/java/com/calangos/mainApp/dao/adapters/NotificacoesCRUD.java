@@ -37,8 +37,8 @@ public class NotificacoesCRUD extends Notificacoes implements $ObjectCRUD {
         contentValues.put("NOT_NOME", this.getNome());
         contentValues.put("NOT_TIPO", this.getTipo());
         contentValues.put("NOT_DESCRICAO", this.getDescricao());
-        contentValues.put("ALUNOS_ID_ALUNOS", this.getAluno().getId());
-        contentValues.put("INSTRUTORES_ID_INSTRUTORES", this.getInstrutor().getId());
+        contentValues.put("ALUNOS_ID_ALUNOS", this.getAluno());
+        contentValues.put("INSTRUTORES_ID_INSTRUTORES", this.getInstrutor());
 
         crud.insertSQL(this.TABLE_NAME, this.NULL_COLUMN_HACK, contentValues);
 
@@ -63,8 +63,8 @@ public class NotificacoesCRUD extends Notificacoes implements $ObjectCRUD {
                 this.setNome(cursor.getString(1));
                 this.setTipo(cursor.getString(2));
                 this.setDescricao(cursor.getString(3));
-                this.aluno.setId(cursor.getInt(4));
-                this.instrutor.setId(cursor.getInt(5));
+                this.setAluno(cursor.getInt(4));
+                this.setInstrutor(cursor.getInt(5));
                 notificacoes.add(this);
 
             } while (cursor.moveToNext());
@@ -81,8 +81,8 @@ public class NotificacoesCRUD extends Notificacoes implements $ObjectCRUD {
         contentValues.put("NOT_NOME", this.getNome());
         contentValues.put("NOT_TIPO", this.getTipo());
         contentValues.put("NOT_DESCRICAO", this.getDescricao());
-        contentValues.put("ALUNOS_ID_ALUNOS", this.getAluno().getId());
-        contentValues.put("INSTRUTORES_ID_INSTRUTORES", this.getInstrutor().getId());
+        contentValues.put("ALUNOS_ID_ALUNOS", this.getAluno());
+        contentValues.put("INSTRUTORES_ID_INSTRUTORES", this.getInstrutor());
 
         crud.updateSQL(this.TABLE_NAME, contentValues, "_ID_NOTIFICACOES = ?", new String[]{"" + this.getId()});
 

@@ -9,47 +9,47 @@ import java.util.List;
 
 public class Treinamento {
 
-    private Atleta atleta;
-    private Instrutor intrutor;
-    private List<Exercicio> exercicio;
-    private Notificacoes notificacoes;
+    private int atleta;
+    private int intrutor;
+    private List<Integer> exercicio;
+    private int notificacoes;
 
     public Treinamento() {
-        this.atleta = new Atleta();
-        this.intrutor = new Instrutor();
+        this.atleta = -1;
+        this.intrutor = -1;
         this.exercicio = new ArrayList<>();
-        this.notificacoes = new Notificacoes();
+        this.notificacoes = -1;
     }
 
-    public Atleta getAtleta() {
+    public int getAtleta() {
         return atleta;
     }
 
-    public void setAtleta(Atleta Atleta) {
-        this.atleta = Atleta;
+    public void setAtleta(int atleta) {
+        this.atleta = atleta;
     }
 
-    public Instrutor getIntrutor() {
+    public int getIntrutor() {
         return intrutor;
     }
 
-    public void setIntrutor(Instrutor intrutor) {
+    public void setIntrutor(int intrutor) {
         this.intrutor = intrutor;
     }
 
-    public List<Exercicio> getExercicio() {
+    public List<Integer> getExercicio() {
         return exercicio;
     }
 
-    public void setExercicio(List<Exercicio> exercicio) {
+    public void setExercicio(List<Integer> exercicio) {
         this.exercicio = exercicio;
     }
 
-    public Notificacoes getNotificacoes() {
+    public int getNotificacoes() {
         return notificacoes;
     }
 
-    public void setNotificacoes(Notificacoes notificacoes) {
+    public void setNotificacoes(int notificacoes) {
         this.notificacoes = notificacoes;
     }
 }

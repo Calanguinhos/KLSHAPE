@@ -1,5 +1,6 @@
 package com.calangos.mainApp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -23,6 +24,9 @@ public class actLogin extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                Intent a = new Intent(actLogin.this, actMenuTreinador.class);
+                startActivity(a);
 
             }
         });
