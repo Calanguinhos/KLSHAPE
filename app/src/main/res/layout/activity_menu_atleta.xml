@@ -33,9 +33,9 @@ tools:context=".actLogin">
         android:id="@+id/imageButtonConsutaFicha"
         android:layout_width="350dp"
         android:layout_height="100dp"
-        android:layout_below="@+id/imageView8"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="77dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/imageButtonSolicitarFicha"
         android:background="@android:color/transparent"
         android:src="@mipmap/inf_ficha" />
 
@@ -58,7 +58,8 @@ tools:context=".actLogin">
         android:layout_marginRight="23dp"
         android:text="João da SIlva"
         android:textColor="@android:color/background_light"
-        android:layout_below="@+id/textViewNomeAtleta" />
+        android:layout_below="@+id/textViewNomeAtleta"
+        tools:ignore="UnknownId" />
 
     <TextView
         android:id="@+id/textViewNomeAtleta"
@@ -92,5 +93,14 @@ tools:context=".actLogin">
         android:layout_toRightOf="@+id/imageView13"
         android:text="@android:string/defaultMsisdnAlphaTag"
         android:textColor="@color/background_floating_material_light" />
+
+    <ImageButton
+        android:id="@+id/imageButtonSolicitarFicha"
+        android:layout_width="360dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/imageView8"
+        android:layout_marginTop="77dp"
+        android:background="@android:color/transparent"
+        app:srcCompat="@mipmap/info_solicitar" />
 
 </RelativeLayout>
