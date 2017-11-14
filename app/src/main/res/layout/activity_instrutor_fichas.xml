@@ -13,18 +13,9 @@ tools:context=".actInsFicha">
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        app:srcCompat="@mipmap/info_criacao"
+        android:src="@mipmap/info_criacao"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
-
-    <Spinner
-        android:id="@+id/spinnerClasse"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView6"
-        android:layout_marginTop="138dp"
-        />
-
 
     <TextView
         android:id="@+id/textView4"
@@ -40,6 +31,17 @@ tools:context=".actInsFicha">
         android:textColor="@color/background_floating_material_light"
         android:textSize="18sp" />
 
+    <Spinner
+        android:id="@+id/spinnerClasse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView6"
+        android:layout_marginTop="138dp"
+        android:backgroundTint="@color/Branco"
+        android:foregroundTint="@color/Branco"
+        android:visibility="visible"
+        tools:style="@style/Widget.AppCompat.Spinner.Underlined" />
+
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
@@ -50,6 +52,20 @@ tools:context=".actInsFicha">
         android:text="Tipo"
         android:textColor="@color/background_floating_material_light"
         android:textSize="18sp" />
+
+    <Spinner
+        android:id="@+id/spinnerTipo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignLeft="@+id/textView5"
+        android:layout_alignStart="@+id/textView5"
+        android:layout_centerVertical="true"
+        android:backgroundTint="@color/Branco"
+        android:foregroundTint="@color/Branco"
+        android:visibility="visible"
+        tools:style="@style/Widget.AppCompat.Spinner.Underlined"/>
 
     <TextView
         android:id="@+id/textView6"
@@ -64,20 +80,18 @@ tools:context=".actInsFicha">
         android:textSize="18sp" />
 
     <Spinner
-        android:id="@+id/spinnerTipo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_centerVertical="true" />
-
-    <Spinner
         android:id="@+id/spinnerExercicio"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView6" />
+        android:layout_alignLeft="@+id/textView6"
+        android:backgroundTint="@color/Branco"
+        android:foregroundTint="@color/Branco"
+        android:layout_alignStart="@+id/textView6"
+        android:layout_below="@+id/textView6"
+        android:visibility="visible"
+        tools:style="@style/Widget.AppCompat.Spinner.Underlined"/>
 
     <Button
         android:id="@+id/buttonEnviar"

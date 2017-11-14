@@ -1,6 +1,7 @@
 package com.calangos.mainApp;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -17,7 +18,7 @@ import com.calangos.mainApp.models.Atleta;
 
 public class actMenuAtleta extends Activity {
 
-    private ImageButton btnConsultaFicha;
+    private ImageButton btnConsultaFicha, btnSolicitarFicha;
     private TextView txvNomeAluno, txvNomeInstrutor;
     private Atleta atleta = new Atleta();
 
@@ -30,13 +31,21 @@ public class actMenuAtleta extends Activity {
         txvNomeInstrutor = findViewById(R.id.textViewNomeTreinador);
 
         btnConsultaFicha = findViewById(R.id.imageButtonConsutaFicha);
+        btnSolicitarFicha = findViewById(R.id.imageButtonSolicitarFicha);
 
-        txvNomeAluno.setText(atleta.getNome());
         btnConsultaFicha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                Toast.makeText(getApplicationContext(), "SEM FICHA CADASTRADA", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(actMenuAtleta.this, actAtlFicha.class);
+                startActivity(intent);
+            }
+        });
+
+        btnSolicitarFicha.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "Solicitação enviada!", Toast.LENGTH_SHORT).show();
             }
         });
 
