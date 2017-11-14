@@ -8,6 +8,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.calangos.mainApp.dao.adapters.AtletaCRUD;
+import com.calangos.mainApp.models.Atleta;
+
 /**
  * Created by rafael on 31/10/17.
  */
@@ -15,17 +18,20 @@ import android.widget.Toast;
 public class actMenuAtleta extends Activity {
 
     private ImageButton btnConsultaFicha;
-    private TextView txvNomeALuno, txvNomeInstrutor;
+    private TextView txvNomeAluno, txvNomeInstrutor;
+    private Atleta atleta = new Atleta();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_atleta);
 
-        txvNomeALuno = findViewById(R.id.textViewNomeAtleta);
+        txvNomeAluno = findViewById(R.id.textViewNomeAtleta);
         txvNomeInstrutor = findViewById(R.id.textViewNomeTreinador);
 
         btnConsultaFicha = findViewById(R.id.imageButtonConsutaFicha);
+
+        txvNomeAluno.setText(atleta.getNome());
         btnConsultaFicha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

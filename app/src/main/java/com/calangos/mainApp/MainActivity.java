@@ -6,6 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
 
+import com.calangos.mainApp.dao.adapters.AtletaCRUD;
+import com.calangos.mainApp.models.Atleta;
+
 public class MainActivity extends AppCompatActivity {
 
     private ImageButton btnLogin, btnCadastrar;

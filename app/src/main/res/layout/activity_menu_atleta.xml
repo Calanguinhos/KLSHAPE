@@ -1,33 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:background="@drawable/fundo"
-tools:context=".actLogin">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fundo"
+    tools:context=".actLogin">
 
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="14dp"
-        android:src="@mipmap/mini_icon_atleta"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:contentDescription="@string/sds"
+        android:src="@mipmap/mini_icon_atleta" />
 
     <ImageView
         android:id="@+id/imageView11"
         android:layout_width="100dp"
         android:layout_height="25dp"
-        android:layout_marginTop="20dp"
-        android:src="@mipmap/bem_vindo"
-        android:layout_below="@+id/imageView2"
-        android:layout_alignRight="@+id/imageView2"
         android:layout_alignEnd="@+id/imageView2"
+        android:layout_alignRight="@+id/imageView2"
+        android:layout_below="@+id/imageView2"
+        android:layout_marginEnd="45dp"
         android:layout_marginRight="45dp"
-        android:layout_marginEnd="45dp" />
+        android:layout_marginTop="20dp"
+        android:contentDescription="@string/sds"
+        android:src="@mipmap/bem_vindo"
+        app:srcCompat="@mipmap/bem_vindo" />
 
     <ImageButton
         android:id="@+id/imageButtonConsutaFicha"
@@ -37,15 +40,19 @@ tools:context=".actLogin">
         android:layout_alignParentStart="true"
         android:layout_below="@+id/imageButtonSolicitarFicha"
         android:background="@android:color/transparent"
-        android:src="@mipmap/inf_ficha" />
+        android:contentDescription="@string/sds"
+        android:src="@mipmap/inf_ficha"
+        android:visibility="visible"
+        app:srcCompat="@mipmap/inf_ficha" />
 
     <ImageView
         android:id="@+id/imageView13"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:src="@mipmap/logokl"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/sds"
+        android:src="@mipmap/logokl" />
 
     <TextView
         android:id="@+id/textView"
@@ -54,11 +61,11 @@ tools:context=".actLogin">
         android:layout_alignBottom="@+id/imageView11"
         android:layout_alignEnd="@+id/imageView17"
         android:layout_alignRight="@+id/imageView17"
+        android:layout_below="@+id/textViewNomeAtleta"
         android:layout_marginEnd="23dp"
         android:layout_marginRight="23dp"
-        android:text="João da SIlva"
+        android:text="@string/jo_o_da_silva"
         android:textColor="@android:color/background_light"
-        android:layout_below="@+id/textViewNomeAtleta"
         tools:ignore="UnknownId" />
 
     <TextView
@@ -66,33 +73,34 @@ tools:context=".actLogin">
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/imageView8"
-        android:layout_alignLeft="@+id/imageView8"
-        android:layout_alignStart="@+id/imageView8"
-        android:layout_marginLeft="27dp"
-        android:layout_marginStart="27dp"
-        android:text="@android:string/defaultMsisdnAlphaTag"
+        android:layout_alignLeft="@+id/imageView2"
+        android:layout_alignStart="@+id/imageView2"
+        android:layout_marginLeft="29dp"
+        android:layout_marginStart="29dp"
+        android:text="TesteAtleta"
         android:textColor="@android:color/background_light" />
 
     <ImageView
         android:id="@+id/imageView8"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        app:srcCompat="@mipmap/info_treinadorr"
+        android:layout_alignLeft="@+id/imageView13"
+        android:layout_alignStart="@+id/imageView13"
         android:layout_below="@+id/imageView11"
-        android:layout_alignRight="@+id/textViewNomeTreinador"
-        android:layout_alignEnd="@+id/textViewNomeTreinador" />
+        android:layout_marginTop="11dp"
+        android:contentDescription="@string/sds"
+        android:visibility="visible"
+        app:srcCompat="@mipmap/info_treinadorr" />
 
     <TextView
         android:id="@+id/textViewNomeTreinador"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/imageView8"
-        android:layout_marginLeft="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_toEndOf="@+id/imageView13"
-        android:layout_toRightOf="@+id/imageView13"
-        android:text="@android:string/defaultMsisdnAlphaTag"
-        android:textColor="@color/background_floating_material_light" />
+        android:layout_above="@+id/imageButtonSolicitarFicha"
+        android:layout_toEndOf="@+id/imageView11"
+        android:layout_toRightOf="@+id/imageView11"
+        android:text="TesteTreinador"
+        android:textColor="@android:color/background_light" />
 
     <ImageButton
         android:id="@+id/imageButtonSolicitarFicha"
@@ -101,6 +109,8 @@ tools:context=".actLogin">
         android:layout_below="@+id/imageView8"
         android:layout_marginTop="77dp"
         android:background="@android:color/transparent"
+        android:contentDescription="@string/sds"
+        android:visibility="visible"
         app:srcCompat="@mipmap/info_solicitar" />
 
 </RelativeLayout>

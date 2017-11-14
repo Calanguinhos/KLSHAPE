@@ -9,11 +9,18 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.calangos.mainApp.dao.adapters.AtletaCRUD;
+import com.calangos.mainApp.dao.adapters.InstrutorCRUD;
+import com.calangos.mainApp.models.Atleta;
+import com.calangos.mainApp.models.Instrutor;
+
 public class actLogin extends AppCompatActivity {
 
     protected EditText edtEmail, edtSenha;
     private ImageButton btnLogin;
     private CheckBox chkbxAluno, chkbxInstrutor;
+    private Atleta atleta = new Atleta();
+    private Instrutor instrutor = new Instrutor();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,9 +54,15 @@ public class actLogin extends AppCompatActivity {
             } else if (edtSenha.length() == 0){
                 Toast.makeText(this, "Informe a senha do aluno", Toast.LENGTH_SHORT).show();
             } else {
-                Intent intent = new Intent(actLogin.this, actMenuAtleta.class);
-                startActivity(intent);
-                finish();
+                if (edtEmail.getEditableText() != null && edtSenha.getEditableText() != null ) {
+                    atleta.setNome(edtEmail.getText().toString());
+                    Intent intent = new Intent(actLogin.this, actMenuAtleta.class);
+                    startActivity(intent);
+                    finish();
+                } else {
+                    Toast.makeText(this, "Usuário ou senha inválidos", Toast.LENGTH_SHORT).show();
+                }
+
             }
         } else if (chkbxInstrutor.isChecked()) {
             if (edtEmail.length() == 0) {
@@ -57,9 +70,15 @@ public class actLogin extends AppCompatActivity {
             } else if (edtSenha.length() == 0){
                 Toast.makeText(this, "Informe a senha do instrutor", Toast.LENGTH_SHORT).show();
             } else {
-                Intent a = new Intent(actLogin.this, actMenuTreinador.class);
-                startActivity(a);
-                finish();
+                if (edtEmail.getEditableText() != null && edtSenha.getEditableText() != null){
+                    instrutor.setNome(edtEmail.getText().toString());
+                    Intent a = new Intent(actLogin.this, actMenuTreinador.class);
+                    startActivity(a);
+                    finish();
+                } else {
+                    Toast.makeText(this, "Usuário ou senha inválidos", Toast.LENGTH_SHORT).show();
+                }
+
             }
         } else {
             Toast.makeText(this, "Informe se é um Instrutor ou Aluno", Toast.LENGTH_SHORT).show();
