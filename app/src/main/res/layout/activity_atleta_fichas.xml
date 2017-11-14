@@ -23,6 +23,7 @@ tools:context=".actLogin">
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/imageView5"
-        android:layout_marginTop="19dp" />
+        android:layout_marginTop="19dp"
+        android:background="@android:color/background_light" />
 
 </RelativeLayout>

@@ -1,11 +1,10 @@
-package com.calangos.mainApp.dao.adapters;
+package com.calangos.mainApp.dao.cruds;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 
 import com.calangos.mainApp.dao.CRUD;
-import com.calangos.mainApp.models.Notificacoes;
 import com.calangos.mainApp.utils.$ObjectCRUD;
 import com.calangos.mainApp.models.Treinamento;
 

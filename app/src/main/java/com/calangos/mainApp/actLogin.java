@@ -9,8 +9,6 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-import com.calangos.mainApp.dao.adapters.AtletaCRUD;
-import com.calangos.mainApp.dao.adapters.InstrutorCRUD;
 import com.calangos.mainApp.models.Atleta;
 import com.calangos.mainApp.models.Instrutor;
 

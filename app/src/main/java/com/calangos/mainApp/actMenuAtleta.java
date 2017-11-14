@@ -5,11 +5,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.calangos.mainApp.dao.adapters.AtletaCRUD;
 import com.calangos.mainApp.models.Atleta;
 
 /**
@@ -20,7 +19,10 @@ public class actMenuAtleta extends Activity {
 
     private ImageButton btnConsultaFicha, btnSolicitarFicha;
     private TextView txvNomeAluno, txvNomeInstrutor;
+    private ListView lsvNotificacao;
     private Atleta atleta = new Atleta();
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +48,8 @@ public class actMenuAtleta extends Activity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Solicitação enviada!", Toast.LENGTH_SHORT).show();
+
+
             }
         });
 

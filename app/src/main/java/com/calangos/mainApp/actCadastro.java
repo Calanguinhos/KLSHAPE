@@ -9,8 +9,8 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
-import com.calangos.mainApp.dao.adapters.AtletaCRUD;
-import com.calangos.mainApp.dao.adapters.InstrutorCRUD;
+import com.calangos.mainApp.dao.cruds.AtletaCRUD;
+import com.calangos.mainApp.dao.cruds.InstrutorCRUD;
 import com.calangos.mainApp.models.Atleta;
 import com.calangos.mainApp.models.Instrutor;
 
